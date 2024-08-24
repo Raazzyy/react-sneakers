@@ -32,7 +32,7 @@ function Drawer({ onClose, onRemove, items = [], opened}) {
       <div className={`${styles.overlay} ${opened ? styles.overlayVisible : ''}`}>
         <div className={styles.drawer}>
           <h2 onClick={onClose} className="d-flex justify-between mb-30">
-            Корзина <img className="cu-p" src="img/remove.svg" alt="" />
+            Корзина <img className="cu-p" src="/img/remove.svg" alt="" />
           </h2>
 
           {items.length > 0 ? (
@@ -51,7 +51,7 @@ function Drawer({ onClose, onRemove, items = [], opened}) {
                     <img
                       onClick={() => onRemove(obj.id)}
                       className="removeBtn"
-                      src="img/remove.svg"
+                      src="/img/remove.svg"
                       alt=""
                     />
                   </div>
@@ -71,7 +71,7 @@ function Drawer({ onClose, onRemove, items = [], opened}) {
                   </li>
                 </ul>
                 <button disabled={isLoading} onClick={onClickOrder} className="greenButton">
-                  Оформить заказ <img src="img/arrow.svg" alt="" />
+                  Оформить заказ <img src="/img/arrow.svg" alt="" />
                 </button>
               </div>
             </div>
@@ -79,7 +79,7 @@ function Drawer({ onClose, onRemove, items = [], opened}) {
             <Info 
             title={isOrderComplete ? "Заказ оформлен!" : "Корзина пустая"}
             description={isOrderComplete ? `Ваш заказ №${orderId} скоро будет передан курьерской доставке` : "Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ."}
-            image={isOrderComplete ? "img/order-complete.svg" : "img/cart-empty.svg"}/>
+            image={isOrderComplete ? "/img/order-complete.svg" : "/img/cart-empty.svg"}/>
 
           )}
         </div>
